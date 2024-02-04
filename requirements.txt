@@ -1,3 +1,3 @@
-docx
+python-docx
 streamlit
 pandas
