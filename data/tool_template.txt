@@ -1,0 +1,5 @@
+{"name": "weather_info", "description": "获取指定城市的天气信息", "parameters": [{"name": "city", "description": "城市名称","type":"str","required":true},{"name":"date","description":"查询日期","type":"str","required":true}]}
+{"name": "calculator", "description": "通过Python解释器执行数学公式的计算", "parameters": [{"name": "expression", "description": "需要执行的数学表达式，目前仅支持四则运算，例如3+2*5","type":"str","required":true}]}
+{"name": "lookupCharge", "description": "查询月度消费账单", "parameters": [{"name": "month", "description": "需要规定查询的月度，仅仅只能查询月度的消费","type":"str","required":true}]}
+{"name": "calendar", "description": "查询日期", "parameters": [{"name": "date_string", "description": "查询日期，例如昨天是几月几号.","type":"str","required":true}]}
+{"name": "knowledgeRetrieval", "description": "用户咨询咪咕公司及其咖啡产品方面的知识库信息","parameters": [{"name": "query", "description": "用户对咪咕公司的提问","type":"str","required":true},{"name":"keyword","description":"关键词，比如咪咕公司介绍，咖啡品质特点","type":"str","required":true}]}
