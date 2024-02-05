@@ -2,7 +2,7 @@ import streamlit as st
 from .systemplate_win import FixedTextWindow
 from .doc_introduce import data_description_doc
 
-def data_description():
+def data_description(win):
 
     st.write("在做数据标注之前，请标注人员务必参考说明。"
              "在这里，我们提供了关于数据结构的说明信息，"
@@ -15,9 +15,9 @@ def data_description():
                     {"from":"user","value":"<task>"},
                     {"from":"assistant","value":"<plan><think><exec><result>"}
                 ]""")
-    win = FixedTextWindow()
-    win.render()
+    _=win.render()
     data_description_doc()
+
 
 
 

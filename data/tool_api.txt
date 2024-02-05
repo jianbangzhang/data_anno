@@ -1,0 +1,5 @@
+{"api_name": "weather_info", "parameters": [{"city":x},{"date":y}]}
+{"api_name": "calculator","parameters": [{"expression":x}]}
+{"api_name": "lookupCharge","parameters": [{"month":x}]}
+{"api_name": "calendar","parameters": [{"date_string":x}]}
+{"api_name": "knowledgeRetrieval","parameters": [{"query":x},{"keyword":y}]}

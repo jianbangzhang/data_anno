@@ -10,7 +10,6 @@ class FixedTextWindow:
         self.systemplate="data/systemplate.txt"
         self.tool_template="data/tool_template.txt"
         self.inner_sep="\n"
-        self.outer_sep="\n\n"
 
     def get_systemplate(self):
         template_text=read_txt(self.systemplate)
@@ -22,11 +21,14 @@ class FixedTextWindow:
         toolfunction_text=self.inner_sep.join(api_text)
         return toolfunction_text
 
-
-    def render(self):
+    def get_prompt(self):
         systemplate = self.get_systemplate()
         tool_api = self.get_toolfunction_api()
-        prompt_string = systemplate + self.outer_sep + tool_api
+        prompt_string = systemplate + self.inner_sep + tool_api
+        return prompt_string
+
+    def render(self):
+        prompt_string=self.get_prompt()
         st.subheader(self.fixed_text)
         st.markdown("**<system><tool_list>**")
         st.write(prompt_string)
@@ -44,4 +46,3 @@ class FixedTextWindow:
         st.write("<think>:调用地理位置查询工具JSON{'api_name':'location_tool',parameters:{'org':'科大讯飞总部'}}")
         st.write("<exec>:{'result':'安徽省合肥市蜀山区望江西路1037号'}")
         st.write("自然语言输出：您好，科大讯飞总部位于安徽省合肥市蜀山区望江西路1037号，还有什么需要帮助的吗？")
-
